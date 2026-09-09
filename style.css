@@ -1,0 +1,419 @@
+:root {
+  --bg-base: #8a6f5c;
+  --bg-dark: #3c2c22;
+  --bg-darker: #241a14;
+  --line-soft: rgba(244, 236, 225, 0.2);
+  --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scrollbar-width: none;
+  }
+
+
+.head {
+  position: relative;
+  min-height: 100vh;
+  background: url("assets/museoxmabini.png") center/cover no-repeat;
+}
+
+.head::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center 0%, rgba(200, 170, 140, 0.35), transparent 10%),
+    linear-gradient(160deg, var(--bg-base) 0%, var(--bg-dark) 70%, var(--bg-darker) 100%);
+  opacity: .75;
+}
+
+.head > * {
+  position: relative;
+  z-index: 1;
+}
+
+#titles {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #f4ece1;
+  position: absolute;
+  top: 210px;
+  left: 33%;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+#titles:hover {
+  color: #f4ece1;
+  text-shadow: 0 0 5px #f4ece1, 0 0 10px #f4ece1, 0 0 15px #f4ece1;
+  transform: scale(1.2);
+  transition: transform .5s ease;
+}
+
+.hero {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: -25px;
+  opacity: 0.6;
+}
+
+body {
+  font-family: "Jost", Arial, sans-serif;
+  color: #f4ece1;
+  background: var(--bg-base);
+}
+
+.title-logo {
+  width: 70px;
+  height: auto;
+  flex-shrink: 0;
+  position: absolute;
+  left: 22%;
+}
+
+.title {
+  padding: 20px;
+  text-align: center;
+  
+}
+
+/*
+.navbar {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 15px 36px;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: inherit;
+  display: block;
+  text-align: center;
+  background-color: none;
+  border-radius: 5px;
+}
+
+.navbar a:hover {
+  background-color: #6a4630;
+  color: #fffdfa;
+}
+
+.navbar li {
+  width: 100px;
+  opacity: 1;
+}
+*/
+.container{
+   max-height: 100vh;
+} 
+
+
+.statue {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px;
+}
+
+.statue-text h3 {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.statue-text p {
+  line-height: 1.5;
+  font-size: 15px;
+  max-width: 450px;
+  text-align: justify;
+}
+
+.shrine{
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 30px;
+  margin: 20px 30px 25px 40px;
+  padding: 5px;
+}
+
+.shrine-text h3 {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.shrine-text{
+  line-height: 1.5;
+  font-size: 15px;
+  max-width: 50%;
+  text-align: justify;
+}
+
+#mabini {
+  position: relative;
+  min-height: 100vh;
+  background: url("assets/kubobg.jpg") center/cover no-repeat;
+}
+
+#mabini::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center 40%, rgba(200, 170, 140, 0.35), transparent 60%),
+    linear-gradient(160deg, var(--bg-base) 0%, var(--bg-dark) 70%, var(--bg-darker) 100%);
+  opacity: 0.75;
+}
+
+#mabini > * {
+  position: relative;
+  z-index: 1;
+}
+
+.map {
+  flex-shrink: 0;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+
+.museum{
+  position: relative;
+  min-height: 100vh;
+  background: url("assets/museoYbilog.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  
+}
+
+.museum::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center 40%, rgba(200, 170, 140, 0.35), transparent 60%),
+    linear-gradient(160deg, var(--bg-base) 0%, var(--bg-dark) 70%, var(--bg-darker) 100%);
+  opacity: 0.75;
+}
+
+.museum > * {
+  position: relative;
+  z-index: 1;
+}
+
+.museum-img{
+  margin-right: 15px;
+}
+
+.museum-text h3 {
+  margin-bottom: 5px;
+  
+}
+
+.museum-text p {
+  line-height: 1.5;
+  font-size: 14px;
+  max-width: 450px;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-darker);
+  padding: 10px 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar-logo {
+  width: 36px;
+  height: auto;
+}
+
+.topbar-title {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+}
+
+.action {
+  color: inherit;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.action:hover,
+.action:focus-visible {
+  background: rgba(244, 236, 225, 0.1);
+}
+
+.head {
+  padding-top: 60px;
+}
+
+.main{
+  min-height: 100vh;
+
+}
+
+.Flag{
+  transform: rotate(20deg);
+  left: 20%;
+  position: relative;
+}
+
+
+.shrinegallery{
+  position: relative;
+  min-height: 100vh;
+  background: url("assets/kubobg.jpg") center/cover no-repeat;
+}
+
+.shrinegallery::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center 40%, rgba(200, 170, 140, 0.35), transparent 60%),
+    linear-gradient(160deg, var(--bg-base) 0%, var(--bg-dark) 70%, var(--bg-darker) 100%);
+  opacity: 0.75;
+}
+
+.shrinegallery > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mcontainer {
+  width: 20%;
+  padding: 10px;
+  margin: 100px auto;
+  position: row;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+
+.gallery1-grid{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.mcontainer{
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 60%;
+  flex-shrink: 0;
+  margin-top: 10px;
+}
+
+.maco img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 5px;
+  animation-name: slideright;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-play-state: running;
+}
+
+.maco{
+  width: 250px;
+  margin: 0 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  transition: 1s;
+  opacity: 0.5;
+}
+
+.maco img {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.maco:hover {
+  scale: 1.2;
+  opacity: 1;
+  transition: 1s;
+}
+
+
+@keyframes slideright {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.gallery1-text{
+    width: 40%;
+    text-align: justify;
+}
+
+.gallery1-text h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.gallery1-text p{
+    width: 700px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+
+
+
